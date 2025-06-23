@@ -3,11 +3,12 @@ package com.algaworks.algaposts.ems_text_processor_service.api.model;
 import lombok.Builder;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Builder
 @Data
-public class PostMessage {
-
+public class PostResult {
     private String postId;
-    private String body;
-
+    private Integer wordCount;
+    private BigDecimal calculatedValue;
 }
