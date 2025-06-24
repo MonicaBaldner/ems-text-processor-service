@@ -26,14 +26,14 @@ public class RabbitMQListener {
     public void handle(@Payload PostMessage postMessage){
 
         log.info("Está no listener de text-processor");
-
-       String id = postMessage.getPostId();
+        String id = postMessage.getPostId();
        String body = postMessage.getBody();
        log.info("Message Received: Id {} Body {}", id, body);
 
-        Thread.sleep(Duration.ofSeconds(15));
+      //  Thread.sleep(Duration.ofSeconds(15));
 
        postProcessService.monetizarPost(postMessage);
+
 
     }
 }
