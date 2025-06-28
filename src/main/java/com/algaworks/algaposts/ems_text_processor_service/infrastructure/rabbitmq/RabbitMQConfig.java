@@ -53,7 +53,7 @@ public class RabbitMQConfig {
         return BindingBuilder.bind(queue_post()).to(exchange_post());
     }
 
-
+   @Bean
     public FanoutExchange exchange_result() {
         return ExchangeBuilder
                 .fanoutExchange(FANOUT_EXCHANGE_NAME_RESULT)
