@@ -27,6 +27,7 @@ public class RabbitMQConfig {
         return new RabbitAdmin(connectionFactory);
     }
 
+    @Bean
     public FanoutExchange exchange_post() {
         return ExchangeBuilder
                 .fanoutExchange(FANOUT_EXCHANGE_NAME_POST)
