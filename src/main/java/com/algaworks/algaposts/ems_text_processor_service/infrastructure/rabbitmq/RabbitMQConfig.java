@@ -17,7 +17,7 @@ public class RabbitMQConfig {
     public static final String FANOUT_EXCHANGE_NAME_POST = "post-service.post-created.v1.e";
 
     public static final String QUEUE_POST = "text-processor-service.post-processing.v1.q";
-    public static final String DEAD_LETTER_QUEUE_POST = "text-processor-service-post-processing.v1.dql";
+    public static final String DEAD_LETTER_QUEUE_POST = "text-processor-service-post-processing.v1.dlq";
     public static final String FANOUT_EXCHANGE_NAME_RESULT = "text-processor-service.text-calculated.v1.e";
 
 
@@ -53,7 +53,7 @@ public class RabbitMQConfig {
         return BindingBuilder.bind(queue_post()).to(exchange_post());
     }
 
-    @Bean
+
     public FanoutExchange exchange_result() {
         return ExchangeBuilder
                 .fanoutExchange(FANOUT_EXCHANGE_NAME_RESULT)

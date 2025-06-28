@@ -25,7 +25,7 @@ public class PostProcessService {
              log.info("Está em monetizarPost de PostProcessingService");
 
             //para testar dql
-             /*if ("forcar erro para teste de dql".equals(postMessage.getBody())) {
+           /*  if ("forcar erro para teste de dql".equals(postMessage.getBody())) {
                  throw new RuntimeException("Simulando erro no serviço");
              }*/
             //fim para testar dql
